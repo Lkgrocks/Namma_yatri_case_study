@@ -1,0 +1,1227 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.25.0114.1153                               -->
+<workbook original-version='18.1' source-build='2024.3.3 (20243.25.0114.1153)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Trips+ (nammayatri)' inline='true' name='federated.0x33ukd05tnobw18tis791cjqs81' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='nammayatri' name='excel-direct.1xj80it0q5yd351625j0i0p1myrv'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/loveg/OneDrive/Documents/advance data visualisation case study/Dataset+and+Starter+Resources/Dataset and Starter Resources/nammayatri.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='excel-direct.1xj80it0q5yd351625j0i0p1myrv' name='Trip_Details' table='[Trip_Details$]' type='table'>
+            <columns gridOrigin='A1:J2162:no:A1:J2162:0' header='yes' outcome='6'>
+              <column datatype='string' name='tripid' ordinal='0' />
+              <column datatype='integer' name='loc_from' ordinal='1' />
+              <column datatype='string' name='searches' ordinal='2' />
+              <column datatype='string' name='searches_got_estimate' ordinal='3' />
+              <column datatype='string' name='searches_for_quotes' ordinal='4' />
+              <column datatype='string' name='searches_got_quotes' ordinal='5' />
+              <column datatype='string' name='customer_not_cancelled' ordinal='6' />
+              <column datatype='string' name='driver_not_cancelled' ordinal='7' />
+              <column datatype='string' name='otp_entered' ordinal='8' />
+              <column datatype='string' name='end_ride' ordinal='9' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1xj80it0q5yd351625j0i0p1myrv' name='Assembly1' table='[Assembly$]' type='table'>
+            <columns gridOrigin='A1:B38:no:A1:B38:0' header='yes' outcome='6'>
+              <column datatype='integer' name='ID' ordinal='0' />
+              <column datatype='string' name='Assembly' ordinal='1' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1xj80it0q5yd351625j0i0p1myrv' name='Trips' table='[Trips$]' type='table'>
+            <columns gridOrigin='A1:I984:no:A1:I984:0' header='yes' outcome='6'>
+              <column datatype='string' name='tripid' ordinal='0' />
+              <column datatype='string' name='faremethod' ordinal='1' />
+              <column datatype='integer' name='fare' ordinal='2' />
+              <column datatype='integer' name='loc_from' ordinal='3' />
+              <column datatype='integer' name='loc_to' ordinal='4' />
+              <column datatype='integer' name='driverid' ordinal='5' />
+              <column datatype='integer' name='custid' ordinal='6' />
+              <column datatype='integer' name='distance' ordinal='7' />
+              <column datatype='string' name='duration' ordinal='8' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1xj80it0q5yd351625j0i0p1myrv' name='Assembly' table='[Assembly$]' type='table'>
+            <columns gridOrigin='A1:B38:no:A1:B38:0' header='yes' outcome='6'>
+              <column datatype='integer' name='ID' ordinal='0' />
+              <column datatype='string' name='Assembly' ordinal='1' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1xj80it0q5yd351625j0i0p1myrv' name='Duration' table='[Duration$]' type='table'>
+            <columns gridOrigin='A1:B25:no:A1:B25:0' header='yes' outcome='2'>
+              <column datatype='string' name='id' ordinal='0' />
+              <column datatype='string' name='duration' ordinal='1' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1xj80it0q5yd351625j0i0p1myrv' name='Payment' table='[Payment$]' type='table'>
+            <columns gridOrigin='A1:B5:no:A1:B5:0' header='yes' outcome='6'>
+              <column datatype='string' name='id' ordinal='0' />
+              <column datatype='string' name='method' ordinal='1' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[Assembly (Assembly1)]' value='[Assembly1].[Assembly]' />
+          <map key='[Assembly]' value='[Assembly].[Assembly]' />
+          <map key='[ID (Assembly1)]' value='[Assembly1].[ID]' />
+          <map key='[ID]' value='[Assembly].[ID]' />
+          <map key='[custid]' value='[Trips].[custid]' />
+          <map key='[customer_not_cancelled]' value='[Trip_Details].[customer_not_cancelled]' />
+          <map key='[distance]' value='[Trips].[distance]' />
+          <map key='[driver_not_cancelled]' value='[Trip_Details].[driver_not_cancelled]' />
+          <map key='[driverid]' value='[Trips].[driverid]' />
+          <map key='[duration (Duration)]' value='[Duration].[duration]' />
+          <map key='[duration]' value='[Trips].[duration]' />
+          <map key='[end_ride]' value='[Trip_Details].[end_ride]' />
+          <map key='[fare]' value='[Trips].[fare]' />
+          <map key='[faremethod]' value='[Trips].[faremethod]' />
+          <map key='[id (Payment)]' value='[Payment].[id]' />
+          <map key='[id]' value='[Duration].[id]' />
+          <map key='[loc_from (Trip!Details)]' value='[Trip_Details].[loc_from]' />
+          <map key='[loc_from]' value='[Trips].[loc_from]' />
+          <map key='[loc_to]' value='[Trips].[loc_to]' />
+          <map key='[method]' value='[Payment].[method]' />
+          <map key='[otp_entered]' value='[Trip_Details].[otp_entered]' />
+          <map key='[searches]' value='[Trip_Details].[searches]' />
+          <map key='[searches_for_quotes]' value='[Trip_Details].[searches_for_quotes]' />
+          <map key='[searches_got_estimate]' value='[Trip_Details].[searches_got_estimate]' />
+          <map key='[searches_got_quotes]' value='[Trip_Details].[searches_got_quotes]' />
+          <map key='[tripid (Trip!Details)]' value='[Trip_Details].[tripid]' />
+          <map key='[tripid]' value='[Trips].[tripid]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>tripid</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[tripid (Trip!Details)]</local-name>
+            <parent-name>[Trip_Details]</parent-name>
+            <remote-alias>tripid</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>loc_from</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[loc_from (Trip!Details)]</local-name>
+            <parent-name>[Trip_Details]</parent-name>
+            <remote-alias>loc_from</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>searches</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[searches]</local-name>
+            <parent-name>[Trip_Details]</parent-name>
+            <remote-alias>searches</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>searches_got_estimate</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[searches_got_estimate]</local-name>
+            <parent-name>[Trip_Details]</parent-name>
+            <remote-alias>searches_got_estimate</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>searches_for_quotes</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[searches_for_quotes]</local-name>
+            <parent-name>[Trip_Details]</parent-name>
+            <remote-alias>searches_for_quotes</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>searches_got_quotes</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[searches_got_quotes]</local-name>
+            <parent-name>[Trip_Details]</parent-name>
+            <remote-alias>searches_got_quotes</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>customer_not_cancelled</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[customer_not_cancelled]</local-name>
+            <parent-name>[Trip_Details]</parent-name>
+            <remote-alias>customer_not_cancelled</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>driver_not_cancelled</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[driver_not_cancelled]</local-name>
+            <parent-name>[Trip_Details]</parent-name>
+            <remote-alias>driver_not_cancelled</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>otp_entered</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[otp_entered]</local-name>
+            <parent-name>[Trip_Details]</parent-name>
+            <remote-alias>otp_entered</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end_ride</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[end_ride]</local-name>
+            <parent-name>[Trip_Details]</parent-name>
+            <remote-alias>end_ride</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Trip_Details]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>10</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:J2162:no:A1:J2162:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ID (Assembly1)]</local-name>
+            <parent-name>[Assembly1]</parent-name>
+            <remote-alias>ID</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Assembly</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Assembly (Assembly1)]</local-name>
+            <parent-name>[Assembly1]</parent-name>
+            <remote-alias>Assembly</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Assembly1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:B38:no:A1:B38:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tripid</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[tripid]</local-name>
+            <parent-name>[Trips]</parent-name>
+            <remote-alias>tripid</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>faremethod</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[faremethod]</local-name>
+            <parent-name>[Trips]</parent-name>
+            <remote-alias>faremethod</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fare</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[fare]</local-name>
+            <parent-name>[Trips]</parent-name>
+            <remote-alias>fare</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>loc_from</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[loc_from]</local-name>
+            <parent-name>[Trips]</parent-name>
+            <remote-alias>loc_from</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>loc_to</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[loc_to]</local-name>
+            <parent-name>[Trips]</parent-name>
+            <remote-alias>loc_to</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>driverid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[driverid]</local-name>
+            <parent-name>[Trips]</parent-name>
+            <remote-alias>driverid</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>custid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[custid]</local-name>
+            <parent-name>[Trips]</parent-name>
+            <remote-alias>custid</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>distance</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[distance]</local-name>
+            <parent-name>[Trips]</parent-name>
+            <remote-alias>distance</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>duration</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[duration]</local-name>
+            <parent-name>[Trips]</parent-name>
+            <remote-alias>duration</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Trips]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>7</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:I984:no:A1:I984:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ID]</local-name>
+            <parent-name>[Assembly]</parent-name>
+            <remote-alias>ID</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Assembly</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Assembly]</local-name>
+            <parent-name>[Assembly]</parent-name>
+            <remote-alias>Assembly</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Assembly]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:B38:no:A1:B38:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[Duration]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>duration</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[duration (Duration)]</local-name>
+            <parent-name>[Duration]</parent-name>
+            <remote-alias>duration</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Duration]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>1</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:B25:no:A1:B25:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[id (Payment)]</local-name>
+            <parent-name>[Payment]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>method</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[method]</local-name>
+            <parent-name>[Payment]</parent-name>
+            <remote-alias>method</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Payment]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>1</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:B5:no:A1:B5:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Assembly (Assembly)' datatype='string' name='[Assembly]' role='dimension' type='nominal' />
+      <column caption='same_location_trips' datatype='string' name='[Calculation_1426796721730686976]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF ([loc_from]-[loc_to])=0 &#13;&#10;Then &quot;YES&quot;&#13;&#10;ELSE &quot;NO&quot;&#13;&#10;End' />
+      </column>
+      <column caption='Cancelled_trip' datatype='string' name='[Calculation_1426796721761103874]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [driver_not_cancelled]=&quot;0&quot; OR [customer_not_cancelled]=&quot;0&quot;&#13;&#10;Then &quot;Yes&quot;&#13;&#10;ELSE &quot;No&quot;&#13;&#10;END' />
+      </column>
+      <column datatype='integer' name='[ID (Assembly1)]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+      <column caption='Assembly1' datatype='table' name='[__tableau_internal_object_id__].[Assembly_5874A619B2D94CD9B41B0E8A9E86E64C]' role='measure' type='quantitative' />
+      <column caption='Assembly' datatype='table' name='[__tableau_internal_object_id__].[Assembly_932FD5F542224508A4A1A0A701963935]' role='measure' type='quantitative' />
+      <column caption='Duration1' datatype='table' name='[__tableau_internal_object_id__].[Duration_39F979B4D06140BABFD305E633C7EEA0]' role='measure' type='quantitative' />
+      <column caption='Payment' datatype='table' name='[__tableau_internal_object_id__].[Payment_564B4FD0125C4417A7DF18D76E56BA9E]' role='measure' type='quantitative' />
+      <column caption='Trip_Details' datatype='table' name='[__tableau_internal_object_id__].[Trip!Details_D4A9C2DE0D3844FA808A028C2F004ED3]' role='measure' type='quantitative' />
+      <column caption='Trips' datatype='table' name='[__tableau_internal_object_id__].[Trips_F117EC95C2214D6B9A8A23A8E8827248]' role='measure' type='quantitative' />
+      <column caption='Custid' datatype='integer' hidden='true' name='[custid]' role='measure' type='quantitative' />
+      <column caption='Customer Not Cancelled' datatype='string' default-role='measure' default-type='quantitative' name='[customer_not_cancelled]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;0&quot;' value='No' />
+          <alias key='&quot;1&quot;' value='Yes' />
+        </aliases>
+      </column>
+      <column caption='Distance' datatype='integer' name='[distance]' role='measure' type='quantitative' />
+      <column caption='Driver Not Cancelled' datatype='string' default-role='measure' default-type='quantitative' name='[driver_not_cancelled]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;0&quot;' value='No' />
+          <alias key='&quot;1&quot;' value='Yes' />
+        </aliases>
+      </column>
+      <column caption='Driverid' datatype='integer' hidden='true' name='[driverid]' role='measure' type='quantitative' />
+      <column caption='Duration' datatype='string' default-role='measure' default-type='quantitative' name='[duration]' role='dimension' type='nominal' />
+      <column caption='End Ride' datatype='string' default-role='measure' default-type='quantitative' name='[end_ride]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;0&quot;' value='No' />
+          <alias key='&quot;1&quot;' value='Yes' />
+        </aliases>
+      </column>
+      <column caption='Fare' datatype='integer' name='[fare]' role='measure' type='quantitative' />
+      <column caption='Faremethod' datatype='string' default-role='measure' default-type='quantitative' name='[faremethod]' role='dimension' type='nominal' />
+      <column datatype='string' name='[id (Payment)]' role='dimension' type='nominal' />
+      <column caption='Id' datatype='string' name='[id]' role='dimension' type='nominal' />
+      <column caption='loc from (Trip!Details)' datatype='integer' name='[loc_from (Trip!Details)]' role='measure' type='quantitative' />
+      <column caption='Loc From' datatype='integer' name='[loc_from]' role='measure' type='quantitative' />
+      <column caption='Loc To' datatype='integer' name='[loc_to]' role='measure' type='quantitative' />
+      <column caption='Method' datatype='string' name='[method]' role='dimension' type='nominal' />
+      <column caption='Otp Entered' datatype='string' default-role='measure' default-type='quantitative' name='[otp_entered]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;0&quot;' value='No' />
+          <alias key='&quot;1&quot;' value='Yes' />
+        </aliases>
+      </column>
+      <column caption='Searches' datatype='string' default-role='measure' default-type='quantitative' name='[searches]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;1&quot;' value='Yes' />
+        </aliases>
+      </column>
+      <column caption='Searches For Quotes' datatype='string' name='[searches_for_quotes]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;0&quot;' value='No' />
+          <alias key='&quot;1&quot;' value='Yes' />
+        </aliases>
+      </column>
+      <column caption='Searches Got Estimate' datatype='string' default-role='measure' default-type='quantitative' name='[searches_got_estimate]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;0&quot;' value='No' />
+          <alias key='&quot;1&quot;' value='Yes' />
+        </aliases>
+      </column>
+      <column caption='Searches Got Quotes' datatype='string' default-role='measure' default-type='quantitative' name='[searches_got_quotes]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;0&quot;' value='No' />
+          <alias key='&quot;1&quot;' value='Yes' />
+        </aliases>
+      </column>
+      <column datatype='string' default-role='measure' default-type='quantitative' name='[tripid (Trip!Details)]' role='dimension' type='nominal' />
+      <column caption='Tripid' datatype='string' default-role='measure' default-type='quantitative' name='[tripid]' role='dimension' type='nominal' />
+      <column-instance column='[__tableau_internal_object_id__].[Trip!Details_D4A9C2DE0D3844FA808A028C2F004ED3]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Trip!Details_D4A9C2DE0D3844FA808A028C2F004ED3:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[customer_not_cancelled]' derivation='Count' name='[cnt:customer_not_cancelled:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[driver_not_cancelled]' derivation='Count' name='[cnt:driver_not_cancelled:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[tripid (Trip!Details)]' derivation='Count' name='[cnt:tripid (Trip!Details):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1426796721761103874]' derivation='None' name='[none:Calculation_1426796721761103874:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' rowDisplayCount='2161' show-aliased-fields='true' show-hidden-fields='true' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0x33ukd05tnobw18tis791cjqs81].[cnt:customer_not_cancelled:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0x33ukd05tnobw18tis791cjqs81].[__tableau_internal_object_id__].[cnt:Trip!Details_D4A9C2DE0D3844FA808A028C2F004ED3:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0x33ukd05tnobw18tis791cjqs81].[cnt:driver_not_cancelled:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0x33ukd05tnobw18tis791cjqs81].[cnt:tripid (Trip!Details):qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_1426796721761103874:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;NO&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Yes&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;No&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;YES&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='tripid' />
+        <field-sort-custom-order field='faremethod' />
+        <field-sort-custom-order field='fare' />
+        <field-sort-custom-order field='loc_from' />
+        <field-sort-custom-order field='loc_to' />
+        <field-sort-custom-order field='driverid' />
+        <field-sort-custom-order field='custid' />
+        <field-sort-custom-order field='distance' />
+        <field-sort-custom-order field='duration' />
+        <field-sort-custom-order field='Calculation_1426796721730686976' />
+      </field-sort-info>
+      <object-graph>
+        <objects>
+          <object caption='Assembly1' id='Assembly_5874A619B2D94CD9B41B0E8A9E86E64C'>
+            <properties context=''>
+              <relation connection='excel-direct.1xj80it0q5yd351625j0i0p1myrv' name='Assembly1' table='[Assembly$]' type='table'>
+                <columns gridOrigin='A1:B38:no:A1:B38:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='ID' ordinal='0' />
+                  <column datatype='string' name='Assembly' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='Assembly' id='Assembly_932FD5F542224508A4A1A0A701963935'>
+            <properties context=''>
+              <relation connection='excel-direct.1xj80it0q5yd351625j0i0p1myrv' name='Assembly' table='[Assembly$]' type='table'>
+                <columns gridOrigin='A1:B38:no:A1:B38:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='ID' ordinal='0' />
+                  <column datatype='string' name='Assembly' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='Duration1' id='Duration_39F979B4D06140BABFD305E633C7EEA0'>
+            <properties context=''>
+              <relation connection='excel-direct.1xj80it0q5yd351625j0i0p1myrv' name='Duration' table='[Duration$]' type='table'>
+                <columns gridOrigin='A1:B25:no:A1:B25:0' header='yes' outcome='2'>
+                  <column datatype='string' name='id' ordinal='0' />
+                  <column datatype='string' name='duration' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='Payment' id='Payment_564B4FD0125C4417A7DF18D76E56BA9E'>
+            <properties context=''>
+              <relation connection='excel-direct.1xj80it0q5yd351625j0i0p1myrv' name='Payment' table='[Payment$]' type='table'>
+                <columns gridOrigin='A1:B5:no:A1:B5:0' header='yes' outcome='6'>
+                  <column datatype='string' name='id' ordinal='0' />
+                  <column datatype='string' name='method' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='Trip_Details' id='Trip!Details_D4A9C2DE0D3844FA808A028C2F004ED3'>
+            <properties context=''>
+              <relation connection='excel-direct.1xj80it0q5yd351625j0i0p1myrv' name='Trip_Details' table='[Trip_Details$]' type='table'>
+                <columns gridOrigin='A1:J2162:no:A1:J2162:0' header='yes' outcome='6'>
+                  <column datatype='string' name='tripid' ordinal='0' />
+                  <column datatype='integer' name='loc_from' ordinal='1' />
+                  <column datatype='string' name='searches' ordinal='2' />
+                  <column datatype='string' name='searches_got_estimate' ordinal='3' />
+                  <column datatype='string' name='searches_for_quotes' ordinal='4' />
+                  <column datatype='string' name='searches_got_quotes' ordinal='5' />
+                  <column datatype='string' name='customer_not_cancelled' ordinal='6' />
+                  <column datatype='string' name='driver_not_cancelled' ordinal='7' />
+                  <column datatype='string' name='otp_entered' ordinal='8' />
+                  <column datatype='string' name='end_ride' ordinal='9' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='Trips' id='Trips_F117EC95C2214D6B9A8A23A8E8827248'>
+            <properties context=''>
+              <relation connection='excel-direct.1xj80it0q5yd351625j0i0p1myrv' name='Trips' table='[Trips$]' type='table'>
+                <columns gridOrigin='A1:I984:no:A1:I984:0' header='yes' outcome='6'>
+                  <column datatype='string' name='tripid' ordinal='0' />
+                  <column datatype='string' name='faremethod' ordinal='1' />
+                  <column datatype='integer' name='fare' ordinal='2' />
+                  <column datatype='integer' name='loc_from' ordinal='3' />
+                  <column datatype='integer' name='loc_to' ordinal='4' />
+                  <column datatype='integer' name='driverid' ordinal='5' />
+                  <column datatype='integer' name='custid' ordinal='6' />
+                  <column datatype='integer' name='distance' ordinal='7' />
+                  <column datatype='string' name='duration' ordinal='8' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[loc_from (Trip!Details)]' />
+              <expression op='[ID (Assembly1)]' />
+            </expression>
+            <first-end-point guaranteed-value='true' object-id='Trip!Details_D4A9C2DE0D3844FA808A028C2F004ED3' />
+            <second-end-point guaranteed-value='true' object-id='Assembly_5874A619B2D94CD9B41B0E8A9E86E64C' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='AND'>
+              <expression op='='>
+                <expression op='[loc_from]' />
+                <expression op='[ID]' />
+              </expression>
+              <expression op='='>
+                <expression op='[loc_to]' />
+                <expression op='[ID]' />
+              </expression>
+            </expression>
+            <first-end-point object-id='Trips_F117EC95C2214D6B9A8A23A8E8827248' />
+            <second-end-point object-id='Assembly_932FD5F542224508A4A1A0A701963935' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[duration]' />
+              <expression op='[id]' />
+            </expression>
+            <first-end-point object-id='Trips_F117EC95C2214D6B9A8A23A8E8827248' />
+            <second-end-point object-id='Duration_39F979B4D06140BABFD305E633C7EEA0' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[faremethod]' />
+              <expression op='[id (Payment)]' />
+            </expression>
+            <first-end-point guaranteed-value='true' object-id='Trips_F117EC95C2214D6B9A8A23A8E8827248' />
+            <second-end-point guaranteed-value='true' object-id='Payment_564B4FD0125C4417A7DF18D76E56BA9E' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[tripid (Trip!Details)]' />
+              <expression op='[tripid]' />
+            </expression>
+            <first-end-point guaranteed-value='true' object-id='Trip!Details_D4A9C2DE0D3844FA808A028C2F004ED3' />
+            <second-end-point guaranteed-value='true' object-id='Trips_F117EC95C2214D6B9A8A23A8E8827248' unique-key='true' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Cancelled Trips'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Cancelled Trips</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Trips+ (nammayatri)' name='federated.0x33ukd05tnobw18tis791cjqs81' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x33ukd05tnobw18tis791cjqs81'>
+            <column caption='Cancelled_trip' datatype='string' name='[Calculation_1426796721761103874]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [driver_not_cancelled]=&quot;0&quot; OR [customer_not_cancelled]=&quot;0&quot;&#13;&#10;Then &quot;Yes&quot;&#13;&#10;ELSE &quot;No&quot;&#13;&#10;END' />
+            </column>
+            <column-instance column='[tripid (Trip!Details)]' derivation='Count' name='[cnt:tripid (Trip!Details):qk]' pivot='key' type='quantitative' />
+            <column caption='Customer Not Cancelled' datatype='string' default-role='measure' default-type='quantitative' name='[customer_not_cancelled]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;0&quot;' value='No' />
+                <alias key='&quot;1&quot;' value='Yes' />
+              </aliases>
+            </column>
+            <column caption='Driver Not Cancelled' datatype='string' default-role='measure' default-type='quantitative' name='[driver_not_cancelled]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;0&quot;' value='No' />
+                <alias key='&quot;1&quot;' value='Yes' />
+              </aliases>
+            </column>
+            <column-instance column='[Calculation_1426796721761103874]' derivation='None' name='[none:Calculation_1426796721761103874:nk]' pivot='key' type='nominal' />
+            <column-instance column='[tripid (Trip!Details)]' derivation='Count' name='[pcto:cnt:tripid (Trip!Details):qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column datatype='string' default-role='measure' default-type='quantitative' name='[tripid (Trip!Details)]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0x33ukd05tnobw18tis791cjqs81].[pcto:cnt:tripid (Trip!Details):qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#f9a655' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0x33ukd05tnobw18tis791cjqs81].[cnt:tripid (Trip!Details):qk]</rows>
+        <cols>[federated.0x33ukd05tnobw18tis791cjqs81].[none:Calculation_1426796721761103874:nk]</cols>
+      </table>
+      <simple-id uuid='{B0E1BBBC-7135-4740-A8F2-1E4CCD773918}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Trips+ (nammayatri)' name='federated.0x33ukd05tnobw18tis791cjqs81' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x33ukd05tnobw18tis791cjqs81'>
+            <column caption='Cancelled_trip' datatype='string' name='[Calculation_1426796721761103874]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [driver_not_cancelled]=&quot;0&quot; OR [customer_not_cancelled]=&quot;0&quot;&#13;&#10;Then &quot;Yes&quot;&#13;&#10;ELSE &quot;No&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Customer Not Cancelled' datatype='string' default-role='measure' default-type='quantitative' name='[customer_not_cancelled]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;0&quot;' value='No' />
+                <alias key='&quot;1&quot;' value='Yes' />
+              </aliases>
+            </column>
+            <column caption='Driver Not Cancelled' datatype='string' default-role='measure' default-type='quantitative' name='[driver_not_cancelled]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;0&quot;' value='No' />
+                <alias key='&quot;1&quot;' value='Yes' />
+              </aliases>
+            </column>
+            <column-instance column='[Calculation_1426796721761103874]' derivation='None' name='[none:Calculation_1426796721761103874:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0x33ukd05tnobw18tis791cjqs81].[none:Calculation_1426796721761103874:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{73362BF8-52E5-4A45-9ACE-E7E35D840F12}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='Cancelled Trips'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0x33ukd05tnobw18tis791cjqs81].[cnt:customer_not_cancelled:qk]</field>
+            <field>[federated.0x33ukd05tnobw18tis791cjqs81].[cnt:tripid (Trip!Details):ok]</field>
+            <field>[federated.0x33ukd05tnobw18tis791cjqs81].[none:duration (Duration):nk]</field>
+            <field>[federated.0x33ukd05tnobw18tis791cjqs81].[sum:customer_not_cancelled:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{CAC6D94B-86D8-4E18-8347-187062E9B3AC}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.0x33ukd05tnobw18tis791cjqs81].[none:Calculation_1426796721761103874:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0x33ukd05tnobw18tis791cjqs81].[none:Assembly (Assembly1):nk]</field>
+            <field>[federated.0x33ukd05tnobw18tis791cjqs81].[none:Calculation_1426796721761103874:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{CE3CE227-CA43-42FD-B8ED-A42164E95A50}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Cancelled Trips' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAACo0lEQVR4nO3YQUoVUBiG4d9MQi9cLxEYDaWB4KiB0LAVJLaAFhLtycUE0QZMnDVTUbpN
+      cwH3OnifZ3Zm3+TlHM7Oer1eD0S9eO4B8JwEQNrL/w9/7+/n8ff1zMzsrg7nbrGYP3e3MzPz
+      ev9g9vf2tr8QNuhJAA9XV3Pz7fvMzCy/XMyvj2dz+fPHzMx8/XA2p0dvt78QNsgTiLQnN8Du
+      ajXL888zM/Pq5GTeLQ/n0/H7mZl5s1hsfx1s2I5vUMo8gUgTAGkCIE0ApAmANAGQJgDSBECa
+      AEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmA
+      NAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgT
+      AGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQ
+      JgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkC
+      IE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDS
+      BECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0A
+      pAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECa
+      AEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmA
+      NAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBEDaP4UnH5kRTUR7AAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
